@@ -1,0 +1,11 @@
+services:
+  builder:
+    build: .
+    container_name: open-ip-kvm
+    ports:
+      - 127.0.0.1:8000:8000
+    volumes:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/video2:/dev/video0
+#      - /dev/video3:/dev/video0
+    privileged: true
